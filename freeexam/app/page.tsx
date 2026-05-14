@@ -1,24 +1,30 @@
+import Link from "next/link";
+
 export default function Home() {
   const exams = [
     {
       title: "Medical Admission Exam",
       category: "Admission",
       students: "12,000+ Students",
+      link: "/admission/medical",
     },
     {
       title: "Engineering Admission Exam",
       category: "Admission",
       students: "9,500+ Students",
+      link: "/admission/engineering",
     },
     {
       title: "HSC ICT Model Test",
       category: "HSC",
       students: "5,000+ Students",
+      link: "/hsc/ict",
     },
     {
       title: "HSC Physics MCQ",
       category: "HSC",
       students: "7,200+ Students",
+      link: "/hsc/physics",
     },
   ];
 
@@ -31,16 +37,18 @@ export default function Home() {
         </h1>
 
         <div className="hidden md:flex space-x-6 text-lg font-medium">
-          <a href="#">Home</a>
-          <a href="#">Exams</a>
-          <a href="#">HSC</a>
-          <a href="#">Admission</a>
-          <a href="#">Contact</a>
+          <Link href="/">Home</Link>
+          <Link href="/exams">Exams</Link>
+          <Link href="/hsc">HSC</Link>
+          <Link href="/admission">Admission</Link>
+          <Link href="/contact">Contact</Link>
         </div>
 
-        <button className="bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700 transition">
-          Login
-        </button>
+        <Link href="/login">
+          <button className="bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700 transition">
+            Login
+          </button>
+        </Link>
       </nav>
 
       {/* Hero Section */}
@@ -55,13 +63,13 @@ export default function Home() {
         </p>
 
         <div className="mt-10 flex flex-col md:flex-row justify-center gap-5">
-          <button className="bg-white text-blue-700 px-8 py-4 rounded-2xl font-semibold text-lg hover:scale-105 transition">
-            Start Free Exam
-          </button>
+          <Link href="/exams">
+            <button className="bg-white text-blue-700 px-8 py-4 rounded-2xl font-semibold text-lg hover:scale-105 transition">
+              Start Free Exam
+            </button>
+          </Link>
 
-          <button className="border border-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white hover:text-blue-700 transition">
-            Explore Exams
-          </button>
+        
         </div>
       </section>
 
@@ -141,9 +149,11 @@ export default function Home() {
                   {exam.students}
                 </p>
 
-                <button className="mt-6 w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition">
-                  Give Exam
-                </button>
+                <Link href={exam.link}>
+                  <button className="mt-6 w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition">
+                    Give Exam
+                  </button>
+                </Link>
               </div>
             ))}
           </div>
@@ -161,68 +171,12 @@ export default function Home() {
           FreeExamZone.
         </p>
 
-        <button className="mt-10 bg-white text-blue-700 px-10 py-4 rounded-2xl text-lg font-bold hover:scale-105 transition">
-          Create Free Account
-        </button>
+        <Link href="/register">
+          <button className="mt-10 bg-white text-blue-700 px-10 py-4 rounded-2xl text-lg font-bold hover:scale-105 transition">
+            Create Free Account
+          </button>
+        </Link>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-black text-gray-300 px-8 py-12">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
-          <div>
-            <h4 className="text-2xl font-bold text-white">
-              FreeExamZone
-            </h4>
-
-            <p className="mt-4 text-gray-400 leading-7">
-              A free online exam platform for HSC and Admission students.
-            </p>
-          </div>
-
-          <div>
-            <h5 className="text-xl font-semibold text-white mb-4">
-              Platform
-            </h5>
-
-            <ul className="space-y-3">
-              <li>Mock Tests</li>
-              <li>Leaderboard</li>
-              <li>MCQ Practice</li>
-              <li>Live Exams</li>
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="text-xl font-semibold text-white mb-4">
-              Categories
-            </h5>
-
-            <ul className="space-y-3">
-              <li>HSC</li>
-              <li>Medical</li>
-              <li>Engineering</li>
-              <li>University Admission</li>
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="text-xl font-semibold text-white mb-4">
-              Contact
-            </h5>
-
-            <ul className="space-y-3">
-              <li>Email: support@freeexamzone.com</li>
-              <li>Facebook</li>
-              <li>YouTube</li>
-              <li>WhatsApp</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500">
-          © 2026 FreeExamZone. All rights reserved.
-        </div>
-      </footer>
     </div>
   );
 }
