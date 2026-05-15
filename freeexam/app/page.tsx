@@ -15,14 +15,14 @@ export default function Home() {
       link: "/admission/engineering",
     },
     {
-      title: "HSC ICT Model Test",
-      category: "HSC",
+      title: "GST admission Exam",
+      category: "Admission",
       students: "5,000+ Students",
       link: "/hsc/ict",
     },
     {
-      title: "HSC Physics MCQ",
-      category: "HSC",
+      title: "Du admission exam",
+      category: "Admission",
       students: "7,200+ Students",
       link: "/hsc/physics",
     },
