@@ -41,6 +41,7 @@ export default function Home() {
           <Link href="/exams">Exams</Link>
           <Link href="/hsc">HSC</Link>
           <Link href="/admission">Admission</Link>
+           <Link href="/about">About Us</Link>
           <Link href="/contact">Contact</Link>
         </div>
 
