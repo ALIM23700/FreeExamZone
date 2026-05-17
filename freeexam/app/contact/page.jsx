@@ -36,7 +36,7 @@ export default function ContactPage() {
                 </h3>
 
                 <p className="text-gray-600">
-                  support@freeexamzone.com
+                  abdulalim23700@gmail.com
                 </p>
               </div>
             </div>
@@ -52,7 +52,7 @@ export default function ContactPage() {
                 </h3>
 
                 <p className="text-gray-600">
-                  +8801XXXXXXXXX
+                  01791723700
                 </p>
               </div>
             </div>
