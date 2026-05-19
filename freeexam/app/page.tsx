@@ -168,7 +168,7 @@ export default function Home() {
         </h3>
 
         <p className="mt-6 text-lg text-gray-200 max-w-2xl mx-auto">
-          Join thousands of HSC and Admission students already practicing on
+          Join lots  of HSC and Admission students already practicing on
           FreeExamZone.
         </p>
 
